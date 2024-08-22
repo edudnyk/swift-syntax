@@ -30,14 +30,19 @@ func runDefaultFatalErrorImplementationMacroPlayground() {
 
 // MARK: - Equatable Extension
 
-@equatable
-struct Pet {
-  let name: String
-}
-
 func runEquatableExtensionMacroPlayground() {
   let cat = Pet(name: "Tom")
   let mouse = Pet(name: "Jerry")
 
   print("Has the cat \(cat) the same name as the mouse \(mouse)?", cat == mouse ? "Yes." : "No.")
 }
+
+@equatable
+struct Pet {
+    struct Dog {
+        
+    }
+  let name: String
+}
+
+extension Pet.Dog {}
